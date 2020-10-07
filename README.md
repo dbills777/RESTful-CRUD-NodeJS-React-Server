@@ -1,8 +1,12 @@
-### ApiServer
+### ApiServer With Templating Engine.
 
 [API SERVER](https://frozen-coast-94100.herokuapp.com/api/players)
+<hr>
+## Uses same endpoints as API server #2. 
+<hr>
 
-## Minimum 4 HTTP Types of endpoints
+<hr>
+- Minimum 4 HTTP Types of endpoints
 <hr>
 From postman any of the below methods can be used on the specified ENDPOINTS.
 refresh /api/players to see the changes that have been made in the mock database.

@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
-
+  <%- include('./partials/head.ejs') %>
+  <head>
+    <style>
+      hr{
+        margin-bottom: 1rem;
+      }
+      p{
+        text-transform: capitalize;
+      }
+    </style>
   <body>
     <nav>
       <div class="top-link">
         <a href="/">
-          <h1 >API Server</h1>
+          <h1>API Server</h1>
         </a>
       </div>
       <ul>
@@ -20,6 +28,7 @@
       <h2>Player: <%= player.name %></h2>
       <p>Team: <%= player.team %></p>
       <p>Championships: <%= player.rings %></p>
+      <hr class="hr">
       <% }) %>
     </div>
   </body>
