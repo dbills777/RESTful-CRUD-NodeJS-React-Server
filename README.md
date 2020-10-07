@@ -2,7 +2,9 @@
 
 [API SERVER](https://frozen-coast-94100.herokuapp.com/api/players)
 <hr>
-## Uses same endpoints as API server #2. 
+ Uses same endpoints as API server. 
+ Landing page (Display) shows a list of names
+ About page (About) shows the list of players from the previous API Project
 <hr>
 
 <hr>
