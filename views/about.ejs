@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+
+  <body>
+    <nav>
+      <div class="top-link">
+        <a href="/">
+          <h1 >API Server</h1>
+        </a>
+      </div>
+      <ul>
+        <li><a href="/">Display</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/player/create">New Player</a></li>
+      </ul>
+    </nav>
+    <div class="about content">
+      <% players.forEach(player=>{ %>
+      <h2>Player: <%= player.name %></h2>
+      <p>Team: <%= player.team %></p>
+      <p>Championships: <%= player.rings %></p>
+      <% }) %>
+    </div>
+  </body>
+</html>
