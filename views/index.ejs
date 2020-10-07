@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('./partials/head.ejs') %>
-  
+ <style>
+   .content{
+     height: 90%;
+   }
+ </style>
   </head>
   <body>
     <nav>
@@ -16,8 +20,10 @@
         <li><a href="/player/create">New Player</a></li>
       </ul>
     </nav>
-    <div class="create-blog content">
+    <div class="create content">
       <h2>List of names <%= names %></h2>
+      <p>Click About to see the list from the API assignment</p>
     </div>
+
   </body>
 </html>
