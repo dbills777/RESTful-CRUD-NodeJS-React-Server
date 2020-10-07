@@ -1,7 +1,7 @@
 {
   "name": "apiserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "[API SERVER](https://frozen-coast-94100.herokuapp.com/api/players) <hr> ## Uses same endpoints as API server #2.  <hr>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +14,14 @@
     "cors": "^2.8.5",
     "ejs": "^3.1.5",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbills777/templateApiServer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dbills777/templateApiServer/issues"
+  },
+  "homepage": "https://github.com/dbills777/templateApiServer#readme"
 }
