@@ -1,4 +1,4 @@
-/* 
+/*
 Heroku Commands Notes:
 after git is setup....
 - heroku login
