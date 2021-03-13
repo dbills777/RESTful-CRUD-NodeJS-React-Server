@@ -91,6 +91,7 @@ characterRouter.delete('/', deleteCharactersByID);
 - contains 60+ items
 
 ## Your app will be deployed to production using some service like Heroku, Digital Ocean, etc.
+Server Deployed to Heroku
 
 ## All of your source code will be properly uploaded to GitHub
 
