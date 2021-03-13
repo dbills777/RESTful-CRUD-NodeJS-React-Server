@@ -1,39 +1,97 @@
-### ApiServer With Templating Engine.
+# RESTful CRUD Node Server Assignment
 
-[API SERVER](https://frozen-coast-94100.herokuapp.com/api/players)
-<hr>
- Uses same endpoints as API server. 
- Landing page (Display) shows a list of names
- About page (About) shows the list of players from the previous API Project
-<hr>
+## Mongoose as your data modeling tool
 
-<hr>
-- Minimum 4 HTTP Types of endpoints
-<hr>
-From postman any of the below methods can be used on the specified ENDPOINTS.
-refresh /api/players to see the changes that have been made in the mock database.
-<hr>
-- GET  
-   /api/players 
-   - Returns the list from data.js
-<hr>
-- POST
-  /api/players 
-  - Example: /api/players/1 (with PostMan) A POST Request sent with postman to this creates a new player and adds it to the list of players. Key values sent in the BODY. The Keys are: name, team and rings. Any Values can be sent for each of these items. and it will create a new player matching with the information sent.
-<hr>
-- PUT
-  /api/players/:id 
-  - Example: /api/players/1 (with PostMan) A PUT Request sent with postman to this Endpoint finds the player with the ID from the Parameter and updates its information with values sent in the BODY. The Keys are: name, team and rings. Any Values can be sent for each of these items. and it will update the player matching the ID that is sent.
-<hr>
-- DELETE
-  /api/players/:id
-   - Example: /api/players/3 (with PostMan) A delete Request sent with postman to this Endpoint finds the player with the given ID and splices it out of the array
-<hr>
+## Cloud-based MongoDB as your data store
 
-- Database NOT required
-- Data kept in memory (Static Object)
-  - endpoints edit data in memory
-- End Points are documented in APIreadme file
-  - works and tested with live site and postman endpoints.
-- End Points must return JSON Formatted Data
-  - Postman shows each item action returned in JSON for PUT POST DELETE. GET can be seen in the browser.
+## At least 3 endpoints to GET data from your server
+
+```javascript
+//Use route in app.js
+app.use('/character', characterRouter);
+//Specify endpoint
+characterRouter.get('/', getAllCharcters);
+// Example Get
+const response = await axios.get(`${url}/character`);
+```
+
+```javascript
+//Use route in app.js
+app.use('/character', characterRouter);
+//Specify endpoint
+characterRouter.get('/search', seachCharacters);
+// Example query
+const response = await axios.get(`${url}/search?term=${searchTerm}`);
+```
+
+```javascript
+//Use route in app.js
+app.use('/episode', episodeRouter);
+//Specify endpoint
+episodeRouter.get('/', getAllEpisodes);
+// Example GET
+const response = await axios.get(`${url}/episode`);
+```
+
+## At least 1 endpoint allowing user to update an item via PUT or PATCH HTTP verbs
+
+```javascript
+//Use route in app.js
+app.use('/character', characterRouter);
+
+//Specify endpoint
+characterRouter.put('/update-name', updateName);
+characterRouter.put('/update-nick-name', updateNickName);
+// Example PUT Requests
+await axios.put(`${url}/update-name`, {
+  characterID: currentCharacter._id,
+  name: newName,
+});
+await axios.put(`${url}/update-nick-name`, {
+  characterID: currentCharacter._id,
+  nickname: newNickName,
+});
+```
+
+## At least 1 endpoint allowing user to create an item via POST
+
+```javascript
+
+//Use route in app.js
+app.use('/character', characterRouter);
+//Specify endpoint
+characterRouter.post('/', postAddCharacter);
+// Example post
+ await axios.post(`${url}/character`, {
+      name: postData.name,
+      image: postData.image,
+      nickname: postData.nickname,
+      occupation: postData.occupation,
+      status: postData.status,
+      portrayed: postData.portrayed,
+      char_id: postData.char_id,
+    });
+```
+## At least 1 endpoint allowing user to delete an item via DELETE
+
+```javascript
+//Use route in app.js
+app.use('/character', characterRouter);
+//Specify endpoint
+characterRouter.delete('/', deleteCharactersByID);
+// Example Delete
+    await axios.delete(`${url}/character`, {
+      data: {
+        productID: currentCharacter._id,
+      },
+    });
+```
+
+## Your datastore will contain at least 25 items
+- contains 60+ items
+
+## Your app will be deployed to production using some service like Heroku, Digital Ocean, etc.
+
+## All of your source code will be properly uploaded to GitHub
+
+## Your ReadMe file will accurately describe the server install process (if any) and how to use the APIs from your web client.
