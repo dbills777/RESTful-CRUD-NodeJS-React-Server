@@ -11,7 +11,7 @@
 app.use('/character', characterRouter);
 //Specify endpoint
 characterRouter.get('/', getAllCharcters);
-// Example Get
+//Example Get
 const response = await axios.get(`${url}/character`);
 ```
 - This Endpoint will execute when search Icon is clicked.
@@ -20,7 +20,7 @@ const response = await axios.get(`${url}/character`);
 app.use('/character', characterRouter);
 //Specify endpoint
 characterRouter.get('/search', seachCharacters);
-// Example query
+//Example query
 const response = await axios.get(`${url}/search?term=${searchTerm}`);
 ```
 - This Endpoint will execute when navigating to the episodes table.
@@ -29,7 +29,7 @@ const response = await axios.get(`${url}/search?term=${searchTerm}`);
 app.use('/episode', episodeRouter);
 //Specify endpoint
 episodeRouter.get('/', getAllEpisodes);
-// Example GET
+//Example GET
 const response = await axios.get(`${url}/episode`);
 ```
 
@@ -43,7 +43,7 @@ app.use('/character', characterRouter);
 //Specify endpoint
 characterRouter.put('/update-name', updateName);
 characterRouter.put('/update-nick-name', updateNickName);
-// Example PUT Requests
+//Example PUT Requests
 await axios.put(`${url}/update-name`, {
   characterID: currentCharacter._id,
   name: newName,
@@ -63,7 +63,7 @@ await axios.put(`${url}/update-nick-name`, {
 app.use('/character', characterRouter);
 //Specify endpoint
 characterRouter.post('/', postAddCharacter);
-// Example post
+//Example post
  await axios.post(`${url}/character`, {
       name: postData.name,
       image: postData.image,
@@ -82,7 +82,7 @@ characterRouter.post('/', postAddCharacter);
 app.use('/character', characterRouter);
 //Specify endpoint
 characterRouter.delete('/', deleteCharactersByID);
-// Example Delete
+//Example Delete
     await axios.delete(`${url}/character`, {
       data: {
         productID: currentCharacter._id,
@@ -94,8 +94,8 @@ characterRouter.delete('/', deleteCharactersByID);
 - contains 60+ items
 
 ## Your app will be deployed to production using some service like Heroku, Digital Ocean, etc.
-Server Deployed to Heroku
-FrontEnd Deployed to Netlify
+- Server Deployed to Heroku
+- FrontEnd Deployed to Netlify
 
 ## All of your source code will be properly uploaded to GitHub
 
